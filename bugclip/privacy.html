@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BugClip Privacy Policy</title>
+  <style>
+    :root{--bg:#f8f9f6;--card:#fffef9;--ink:#201727;--muted:#6c6170;--line:#e7ddea;--plum:#2b0f3a;--teal:#1e7d73;}
+    body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65;margin:0;background:var(--bg);color:var(--ink);}
+    main{max-width:780px;margin:0 auto;padding:56px 22px 80px;}
+    h1{font-size:2.2rem;line-height:1.08;margin:0 0 8px;color:var(--plum);letter-spacing:-.04em;}
+    h2{margin-top:34px;color:#402048;}
+    p,li{font-size:1rem;color:var(--muted);}
+    strong{color:var(--ink);}
+    .updated{color:#7c717f;margin-bottom:32px;}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:0 16px 40px rgba(43,15,58,.08);}
+    a{color:var(--teal);font-weight:700;}
+  </style>
+</head>
+<body>
+<main>
+  <h1>BugClip Privacy Policy</h1>
+  <p class="updated">Last updated: May 17, 2026</p>
+  <div class="card">
+    <p><strong>BugClip</strong> is a Chrome extension that helps users create local developer-ready bug packets from the active browser tab.</p>
+
+    <h2>Information BugClip handles</h2>
+    <p>BugClip may process the following information only after the user clicks the extension and chooses to create a bug packet:</p>
+    <ul>
+      <li>A screenshot of the active tab or selected capture area.</li>
+      <li>The active page URL and page title.</li>
+      <li>Timestamp, user agent, viewport size, device pixel ratio, browser language, and timezone.</li>
+      <li>User-created annotations such as pins, boxes, arrows, text labels, and blur regions.</li>
+      <li>The short bug description typed by the user.</li>
+      <li>Click path, console/error signals, and failed-resource signals captured during reproduce mode after the user starts that mode.</li>
+      <li>Selected element text when the user pins a visible element, except sensitive fields BugClip identifies as private.</li>
+    </ul>
+
+    <h2>Local-first storage and export</h2>
+    <p>BugClip does not require an account for local capture or local export.</p>
+    <p>BugClip stores local options and recent report summaries in Chrome extension storage on the user's device/browser profile. Recent local report summaries are limited to the latest 20 items.</p>
+    <p>When the user chooses an export action, BugClip can copy Markdown to the clipboard or download local PNG, JSON, Markdown, or ZIP files. ZIP exports include <code>screenshot.png</code>, <code>metadata.json</code>, and <code>report.md</code>.</p>
+
+    <h2>No hosted sharing in the MVP</h2>
+    <p>The current MVP does not upload bug packets to a BugClip or linqen server. Hosted share links, team inbox, history sync, and account/payment features are shown as future paid features and are not active in this local MVP.</p>
+
+    <h2>Sensitive information handling</h2>
+    <p>BugClip attempts to suggest blur regions for common sensitive fields such as password, email, phone, payment, token, one-time-code, and similarly named fields. Users can also add manual blur boxes before export.</p>
+    <p>Because screenshots can contain visible page content, users should review the preview and add blur boxes before sharing an export.</p>
+
+    <h2>Permissions</h2>
+    <ul>
+      <li><strong>activeTab:</strong> temporarily access the active tab after the user clicks the extension.</li>
+      <li><strong>tabs:</strong> read the active tab ID, URL, and title for the local bug packet.</li>
+      <li><strong>scripting:</strong> inject the annotation overlay into the active tab after user action.</li>
+      <li><strong>storage:</strong> store local settings and recent local report summaries.</li>
+      <li><strong>downloads:</strong> save local bug packet exports.</li>
+      <li><strong>clipboardWrite:</strong> copy Markdown only when the user clicks the copy action.</li>
+    </ul>
+    <p>BugClip v0.1.0 does not request broad host permissions.</p>
+
+    <h2>Sharing and selling data</h2>
+    <p>BugClip does not sell user data.</p>
+    <p>BugClip does not use user data for advertising, profiling, creditworthiness, lending, or unrelated purposes.</p>
+    <p>BugClip does not transfer user data to third parties except as required by Chrome browser APIs to perform actions requested by the user, or as required by law.</p>
+
+    <h2>Remote code</h2>
+    <p>BugClip does not use remote JavaScript or remote WebAssembly. Its extension code is included in the submitted Chrome Web Store package.</p>
+
+    <h2>User control and deletion</h2>
+    <p>Users can clear BugClip's local extension data through Chrome extension settings, browser storage controls, or by uninstalling the extension.</p>
+
+    <h2>Changes</h2>
+    <p>If this policy changes, the updated version will be posted on this page with a new date.</p>
+
+    <h2>Contact</h2>
+    <p>For privacy questions or support, contact: <a href="mailto:contact@linqen.co.kr">contact@linqen.co.kr</a></p>
+  </div>
+</main>
+</body>
+</html>
