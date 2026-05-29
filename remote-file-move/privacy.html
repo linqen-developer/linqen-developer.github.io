@@ -22,24 +22,25 @@
     <h1>Privacy Policy</h1>
     <div class="card">
       <p><strong>Last updated:</strong> May 29, 2026</p>
-      <p>Remote File Move is a Chrome extension companion for a user-controlled PC-to-PC file bridge. It checks bridge status and can start a browser download from a bridge endpoint that the user has configured.</p>
+      <p>Remote File Move moves allowed files between trusted Windows PCs using a Chrome extension and a separately installed native Windows helper. The extension is the Chrome control surface; the helper performs the local OS clipboard/FileDrop work needed for real file paste.</p>
 
       <h2>Data collection</h2>
-      <p>Remote File Move does not collect, sell, or transfer user data to the publisher or to third parties. The extension does not require an account and does not include analytics or advertising code.</p>
+      <p>Remote File Move does not collect, sell, or transfer user data to the publisher or to third parties. The extension does not require an account and does not include analytics, advertising, or tracking code.</p>
 
-      <h2>Local settings</h2>
-      <p>The extension may store the bridge URL, current PC side, and optional bridge token in Chrome local storage on the user's device. These settings are used only to connect to the user's configured bridge.</p>
+      <h2>Local helper and settings</h2>
+      <p>The native helper may store bridge configuration, current PC side, local token, received-file state, and logs on the user's own Windows device. Chrome local storage may store local popup/status preferences. These values are used only to provide the user's own PC-to-PC bridge workflow.</p>
 
       <h2>File transfer data</h2>
-      <p>When the user uses the download helper, files are requested from the user's configured bridge endpoint and saved through Chrome downloads. The publisher does not receive those files, file names, tokens, or bridge activity.</p>
+      <p>Files are transferred only through the user's configured trusted bridge/relay. The publisher does not receive files, file names, bridge tokens, local logs, or bridge activity. Allowed transfer types are limited to png, jpg, jpeg, pdf, and zip, with a 100MB package limit in the default helper configuration.</p>
 
       <h2>Permissions</h2>
       <ul>
-        <li><strong>storage:</strong> Save local bridge settings.</li>
-        <li><strong>downloads:</strong> Save a pending bridge ZIP when the user chooses to download it.</li>
+        <li><strong>nativeMessaging:</strong> Communicate with the Remote File Move native Windows helper. This is required because Chrome extensions cannot directly set the Windows FileDrop clipboard.</li>
+        <li><strong>storage:</strong> Save local popup/status preferences.</li>
+        <li><strong>downloads:</strong> Save a pending bridge ZIP when the user chooses the Chrome-download fallback.</li>
         <li><strong>notifications:</strong> Show local completion/status notifications.</li>
-        <li><strong>alarms:</strong> Periodically refresh bridge status while Chrome is running.</li>
-        <li><strong>host permissions:</strong> Connect only to the configured trusted bridge/localhost endpoints included in the extension package.</li>
+        <li><strong>alarms:</strong> Periodically refresh helper/bridge status while Chrome is running.</li>
+        <li><strong>host permissions:</strong> Connect only to trusted bridge/localhost endpoints included in the extension package for health checks and user-requested downloads.</li>
       </ul>
 
       <h2>Remote code</h2>
