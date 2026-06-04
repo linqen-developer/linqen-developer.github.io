@@ -1197,16 +1197,6 @@ textarea:focus-visible {
   position: relative;
 }
 
-.step-grid::before {
-  content: "";
-  position: absolute;
-  left: 44px;
-  right: 44px;
-  top: 44px;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.28);
-}
-
 .step-grid article {
   min-height: 276px;
   padding: 24px;
