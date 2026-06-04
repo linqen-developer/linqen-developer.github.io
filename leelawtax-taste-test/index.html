@@ -3,1782 +3,790 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="이로택스 개인회생 · 개인파산 전문 상담 랜딩페이지" />
-  <title>이로택스 개인회생 · 개인파산</title>
-  <link rel="icon" href="img/lee-logo.svg" />
+  <meta name="description" content="이로택스 법무사 사무소 개인회생·개인파산 상담. 채무, 소득, 추심 상태를 기준으로 신청 가능성과 준비 방향을 확인합니다." />
+  <meta name="robots" content="index, follow" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="theme-color" content="#0d3558" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="이로택스 개인회생 · 개인파산 상담" />
+  <meta property="og:description" content="개인회생·파산 상담 전 신청 가능성, 변제금 방향, 필요서류를 먼저 확인하세요." />
+  <meta property="og:site_name" content="이로택스 법무사 사무소" />
+  <meta property="og:image" content="assets/img/og-image.svg" />
+  <title>이로택스 개인회생 · 개인파산 상담</title>
+  <link rel="icon" href="assets/img/lee-logo.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800;900&family=Noto+Serif+KR:wght@500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --classic-blue: #0f4c81;
-      --classic-blue-2: #0b3b64;
-      --blue-deep: #071e38;
-      --blue-ink: #0a1d33;
-      --ink: #1f2732;
-      --muted: #5d6876;
-      --paper: #f6f8fb;
-      --ivory: #eef3f8;
-      --white: #ffffff;
-      --line: rgba(15, 76, 129, .18);
-      --line-strong: rgba(15, 76, 129, .34);
-      --gold: #aa8747;
-      --gold-soft: #d2b77d;
-      --danger: #8a2e2e;
-      --success: #24553a;
-      --shadow: 0 18px 44px rgba(10, 29, 51, .08);
-      --focus: 0 0 0 3px rgba(15, 76, 129, .22);
-    }
-
-    * {
-      box-sizing: border-box;
-      letter-spacing: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 92px;
-    }
-
-    body {
-      margin: 0;
-      color: var(--ink);
-      background: var(--paper);
-      font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", system-ui, sans-serif;
-      line-height: 1.7;
-      word-break: keep-all;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    body::selection {
-      background: rgba(15, 76, 129, .2);
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
-    button,
-    input,
-    textarea,
-    select {
-      font: inherit;
-    }
-
-    a:focus-visible,
-    button:focus-visible,
-    input:focus-visible,
-    textarea:focus-visible,
-    select:focus-visible {
-      outline: none;
-      box-shadow: var(--focus);
-    }
-
-    .container {
-      width: min(1180px, calc(100% - 48px));
-      margin: 0 auto;
-    }
-
-    .site-header {
-      position: relative;
-      z-index: 50;
-      color: var(--blue-ink);
-      background: rgba(255, 255, 255, .96);
-      border-bottom: 1px solid rgba(15, 76, 129, .14);
-      backdrop-filter: blur(12px);
-    }
-
-    .header-inner {
-      min-height: 86px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 16px;
-      min-width: max-content;
-    }
-
-    .brand img {
-      width: 52px;
-      height: 52px;
-      object-fit: contain;
-    }
-
-    .brand-name {
-      display: block;
-      color: var(--blue-ink);
-      font-size: clamp(1.25rem, 2.7vw, 2.35rem);
-      font-weight: 900;
-      line-height: 1.05;
-      white-space: nowrap;
-    }
-
-    .brand-sub {
-      display: block;
-      margin-top: 4px;
-      color: var(--classic-blue);
-      font-size: .78rem;
-      font-weight: 800;
-      line-height: 1.1;
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-      color: #3a4655;
-      font-size: .91rem;
-      font-weight: 800;
-    }
-
-    .nav a {
-      min-height: 44px;
-      display: inline-flex;
-      align-items: center;
-      position: relative;
-    }
-
-    .nav a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 4px;
-      height: 1px;
-      background: var(--classic-blue);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform .2s ease;
-    }
-
-    .nav a:hover::after {
-      transform: scaleX(1);
-    }
-
-    .header-cta-short {
-      display: none;
-    }
-
-    .btn {
-      min-height: 48px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      border-radius: 3px;
-      border: 1px solid transparent;
-      padding: 0 22px;
-      font-weight: 900;
-      line-height: 1;
-      transition: background .2s ease, color .2s ease, border-color .2s ease, transform .2s ease;
-      cursor: pointer;
-      white-space: nowrap;
-    }
-
-    .btn::after {
-      content: "→";
-      transform: translateY(-1px);
-    }
-
-    .btn-primary,
-    .btn-blue {
-      color: var(--white);
-      background: var(--classic-blue);
-      border-color: var(--classic-blue);
-    }
-
-    .btn-primary:hover,
-    .btn-blue:hover {
-      background: var(--classic-blue-2);
-      border-color: var(--classic-blue-2);
-    }
-
-    .btn-outline {
-      color: var(--white);
-      background: transparent;
-      border-color: rgba(255, 255, 255, .48);
-    }
-
-    .btn-outline:hover {
-      background: rgba(255, 255, 255, .12);
-    }
-
-    .hero {
-      min-height: calc(86svh - 86px);
-      color: var(--white);
-      background:
-        radial-gradient(circle at 78% 18%, rgba(210, 183, 125, .22), transparent 23rem),
-        radial-gradient(circle at 18% 82%, rgba(15, 76, 129, .36), transparent 24rem),
-        linear-gradient(135deg, #071e38 0%, #0b3155 48%, #0f4c81 100%);
-      position: relative;
-      overflow: hidden;
-      isolation: isolate;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: -1;
-      background-image:
-        linear-gradient(rgba(255, 255, 255, .05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, .05) 1px, transparent 1px);
-      background-size: 72px 72px;
-      mask-image: linear-gradient(90deg, black 0%, transparent 92%);
-      pointer-events: none;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      right: min(7vw, 96px);
-      top: 20%;
-      bottom: 18%;
-      width: 1px;
-      background: linear-gradient(180deg, transparent, rgba(210, 183, 125, .92), transparent);
-      opacity: .9;
-      pointer-events: none;
-    }
-
-    .hero-inner {
-      min-height: calc(86svh - 86px);
-      display: grid;
-      grid-template-columns: minmax(0, .96fr) minmax(360px, .74fr);
-      align-items: center;
-      gap: clamp(34px, 5vw, 72px);
-      padding: 78px 0 96px;
-    }
-
-    .hero-copy {
-      max-width: 760px;
-    }
-
-    .eyebrow,
-    .section-kicker {
-      margin: 0 0 15px;
-      color: var(--gold-soft);
-      font-size: .78rem;
-      font-weight: 900;
-      text-transform: uppercase;
-    }
-
-    .hero h1 {
-      max-width: 720px;
-      margin: 0;
-      font-family: "Noto Serif KR", "Malgun Gothic", serif;
-      font-size: clamp(2.75rem, 6.2vw, 5.15rem);
-      line-height: 1.12;
-      font-weight: 700;
-      text-wrap: balance;
-    }
-
-    .hero-lead {
-      max-width: 640px;
-      margin: 24px 0 0;
-      color: rgba(255, 255, 255, .84);
-      font-size: 1.08rem;
-      line-height: 1.86;
-      font-weight: 600;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 34px;
-    }
-
-    .hero-proof {
-      position: relative;
-      justify-self: end;
-      width: min(100%, 472px);
-      border: 1px solid rgba(255, 255, 255, .24);
-      background: rgba(255, 255, 255, .94);
-      color: var(--ink);
-      box-shadow: 0 30px 90px rgba(0, 0, 0, .24);
-      overflow: hidden;
-    }
-
-    .hero-proof::before {
-      content: "";
-      position: absolute;
-      inset: 0 0 auto;
-      height: 5px;
-      background: linear-gradient(90deg, var(--gold-soft), #ffffff, var(--classic-blue));
-    }
-
-    .hero-proof-head {
-      padding: 28px 30px 24px;
-      border-bottom: 1px solid var(--line);
-      background: linear-gradient(180deg, #ffffff, #f6f8fb);
-    }
-
-    .hero-proof-head span {
-      display: block;
-      color: var(--classic-blue);
-      font-size: .78rem;
-      font-weight: 900;
-      text-transform: uppercase;
-      margin-bottom: 8px;
-    }
-
-    .hero-proof-head strong {
-      display: block;
-      color: var(--blue-ink);
-      font-size: clamp(1.45rem, 2.3vw, 2rem);
-      line-height: 1.28;
-      font-weight: 900;
-    }
-
-    .hero-metric {
-      display: grid;
-      grid-template-columns: .92fr 1.08fr;
-      gap: 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .hero-metric div {
-      min-height: 174px;
-      padding: 28px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .hero-metric div:first-child {
-      border-right: 1px solid var(--line);
-    }
-
-    .hero-metric span {
-      color: var(--muted);
-      font-size: .88rem;
-      font-weight: 800;
-    }
-
-    .hero-metric strong {
-      display: block;
-      margin-top: 8px;
-      color: var(--classic-blue);
-      font-family: "Noto Serif KR", serif;
-      font-size: clamp(3.2rem, 4.4vw, 4.45rem);
-      line-height: .98;
-      letter-spacing: -0.04em;
-      font-weight: 700;
-    }
-
-    .hero-metric small {
-      display: block;
-      margin-top: 10px;
-      color: var(--muted);
-      font-size: .9rem;
-      font-weight: 700;
-      line-height: 1.5;
-    }
-
-    .hero-checks {
-      display: grid;
-    }
-
-    .hero-check {
-      display: grid;
-      grid-template-columns: 92px 1fr;
-      gap: 20px;
-      align-items: center;
-      padding: 22px 30px;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .hero-check:last-child {
-      border-bottom: 0;
-    }
-
-    .hero-check span {
-      color: var(--gold);
-      font-family: "Noto Serif KR", serif;
-      font-size: 1.35rem;
-      font-weight: 700;
-    }
-
-    .hero-check strong {
-      display: block;
-      color: var(--blue-ink);
-      font-size: 1.04rem;
-      line-height: 1.45;
-    }
-
-    .hero-check small {
-      display: block;
-      margin-top: 4px;
-      color: var(--muted);
-      font-size: .86rem;
-      font-weight: 700;
-      line-height: 1.45;
-    }
-
-    .hero-phone {
-      position: absolute;
-      left: 50%;
-      bottom: 18px;
-      z-index: 2;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 62px;
-      padding: 0 34px;
-      border: 1px solid rgba(255, 255, 255, .42);
-      border-radius: 999px;
-      color: var(--white);
-      background: rgba(7, 31, 58, .42);
-      box-shadow: 0 18px 44px rgba(0, 0, 0, .2);
-      font-size: clamp(1.28rem, 2.6vw, 1.72rem);
-      font-weight: 900;
-      line-height: 1;
-      transform: translateX(-50%);
-      backdrop-filter: blur(10px);
-      white-space: nowrap;
-    }
-
-    .hero-summary {
-      width: min(1180px, calc(100% - 48px));
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      border: 1px solid var(--line);
-      border-top: 0;
-      background: var(--white);
-    }
-
-    .hero-summary div {
-      min-height: 112px;
-      padding: 25px 28px;
-      border-right: 1px solid var(--line);
-    }
-
-    .hero-summary div:last-child {
-      border-right: 0;
-    }
-
-    .hero-summary span {
-      display: block;
-      color: var(--classic-blue);
-      font-size: 1.02rem;
-      font-weight: 900;
-      line-height: 1.55;
-    }
-
-    .hero-summary strong {
-      display: block;
-      color: var(--blue-ink);
-      font-size: 1.02rem;
-      line-height: 1.55;
-    }
-
-    .section {
-      padding: 70px 0;
-    }
-
-    .section-soft {
-      background: var(--paper);
-    }
-
-    .section-white {
-      background: var(--white);
-    }
-
-    .section-blue {
-      color: var(--white);
-      background: var(--classic-blue);
-      overflow: hidden;
-    }
-
-    .section-head {
-      max-width: 740px;
-      margin-bottom: 42px;
-    }
-
-    .section-head.center {
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-    }
-
-    .section-kicker {
-      color: var(--classic-blue);
-      margin-bottom: 12px;
-    }
-
-    .section-blue .section-kicker,
-    .section-blue .eyebrow {
-      color: var(--gold-soft);
-    }
-
-    .section-title {
-      margin: 0;
-      color: var(--blue-ink);
-      font-family: "Noto Serif KR", "Malgun Gothic", serif;
-      font-size: clamp(2rem, 3.5vw, 2.72rem);
-      line-height: 1.32;
-      font-weight: 700;
-      text-wrap: balance;
-    }
-
-    .section-blue .section-title {
-      color: var(--white);
-    }
-
-    .section-copy {
-      max-width: 640px;
-      margin: 15px 0 0;
-      color: var(--muted);
-      font-weight: 600;
-      line-height: 1.78;
-    }
-
-    .section-head.center .section-copy {
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .section-blue .section-copy {
-      color: rgba(255, 255, 255, .76);
-    }
-
-    .quick-layout {
-      display: grid;
-      grid-template-columns: .84fr 1.16fr;
-      gap: 22px;
-      align-items: stretch;
-    }
-
-    .portrait-card,
-    .overview-card,
-    .channel-card,
-    .service-card,
-    .detail-card,
-    .support-card,
-    .contact-card,
-    .review-card {
-      border-radius: 2px;
-      border: 1px solid var(--line);
-      background: var(--white);
-      box-shadow: none;
-      overflow: hidden;
-    }
-
-    .portrait-card {
-      display: grid;
-      grid-template-rows: 1fr auto;
-    }
-
-    .portrait-card img {
-      width: 100%;
-      height: 100%;
-      min-height: 440px;
-      object-fit: cover;
-      background: #eef3f8;
-    }
-
-    .portrait-label {
-      padding: 24px 28px;
-      color: var(--white);
-      background: var(--blue-ink);
-      border-top: 4px solid var(--classic-blue);
-    }
-
-    .portrait-label span {
-      display: block;
-      color: rgba(255, 255, 255, .7);
-      font-size: .82rem;
-      font-weight: 800;
-    }
-
-    .portrait-label strong {
-      display: block;
-      margin-top: 4px;
-      font-size: 1.35rem;
-      font-weight: 900;
-    }
-
-    .quick-side {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-    }
-
-    .overview-card {
-      grid-row: span 2;
-      padding: 32px;
-      color: var(--white);
-      background: var(--classic-blue);
-      border-color: var(--classic-blue);
-    }
-
-    .overview-title {
-      color: rgba(255, 255, 255, .68);
-      font-size: .82rem;
-      font-weight: 900;
-      text-transform: uppercase;
-    }
-
-    .overview-list {
-      display: grid;
-      margin: 28px 0 0;
-      border-top: 1px solid rgba(255, 255, 255, .18);
-    }
-
-    .overview-list a,
-    .overview-list div {
-      display: grid;
-      grid-template-columns: 54px 1fr;
-      gap: 18px;
-      align-items: center;
-      padding: 24px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, .18);
-    }
-
-    .overview-list span {
-      color: var(--gold-soft);
-      font-family: "Noto Serif KR", serif;
-      font-size: 1.55rem;
-      font-weight: 700;
-    }
-
-    .overview-list strong {
-      color: var(--white);
-      font-size: 1.35rem;
-      font-weight: 900;
-    }
-
-    .overview-card .btn-blue {
-      margin-top: 28px;
-      color: var(--classic-blue);
-      background: var(--white);
-      border-color: var(--white);
-    }
-
-    .channel-card {
-      min-height: 212px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 28px;
-      border-top: 3px solid var(--classic-blue);
-    }
-
-    .channel-card.gold {
-      border-top-color: var(--gold);
-    }
-
-    .channel-card small {
-      color: var(--classic-blue);
-      font-size: .78rem;
-      font-weight: 900;
-      text-transform: uppercase;
-    }
-
-    .channel-card h3 {
-      margin: 16px 0 10px;
-      color: var(--blue-ink);
-      font-size: 1.28rem;
-      line-height: 1.38;
-    }
-
-    .channel-card p {
-      margin: 0;
-      color: var(--muted);
-      font-weight: 600;
-    }
-
-    .channel-card .link {
-      margin-top: 24px;
-      color: var(--classic-blue);
-      font-weight: 900;
-    }
-
-    .phone-cta {
-      margin-top: 24px;
-      display: flex;
-      justify-content: center;
-    }
-
-    .phone-cta a {
-      min-height: 66px;
-      min-width: min(100%, 520px);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 18px;
-      border-radius: 2px;
-      color: var(--white);
-      background: var(--blue-ink);
-      font-weight: 900;
-    }
-
-    .phone-cta span {
-      color: rgba(255, 255, 255, .7);
-      font-size: .88rem;
-    }
-
-    .phone-cta strong {
-      font-size: clamp(1.45rem, 4vw, 2rem);
-    }
-
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-
-    .service-card {
-      min-height: 230px;
-      padding: 30px;
-      position: relative;
-      background: #fff;
-      transition: border-color .2s ease, background .2s ease;
-    }
-
-    .service-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-top: 3px solid var(--classic-blue);
-      pointer-events: none;
-    }
-
-    .service-card:hover {
-      border-color: rgba(15, 76, 129, .42);
-      background: #fbfdff;
-    }
-
-    .service-card span {
-      display: block;
-      color: var(--classic-blue);
-      font-family: "Noto Serif KR", serif;
-      font-size: 1.58rem;
-      font-weight: 700;
-    }
-
-    .service-card h3 {
-      margin: 18px 0 12px;
-      color: var(--blue-ink);
-      font-size: 1.65rem;
-      line-height: 1.3;
-    }
-
-    .service-card p {
-      margin: 0;
-      color: var(--muted);
-      font-weight: 600;
-    }
-
-    .detail-group {
-      margin-top: 62px;
-    }
-
-    .detail-head {
-      display: grid;
-      grid-template-columns: minmax(180px, .55fr) 1fr;
-      align-items: end;
-      gap: 28px;
-      padding-bottom: 18px;
-      margin-bottom: 18px;
-      border-bottom: 2px solid var(--classic-blue);
-    }
-
-    .detail-head h3 {
-      margin: 0;
-      color: var(--blue-ink);
-      font-size: 1.58rem;
-      line-height: 1.35;
-    }
-
-    .detail-head p {
-      margin: 0;
-      color: var(--muted);
-      font-weight: 700;
-      text-align: right;
-    }
-
-    .detail-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-    }
-
-    .detail-card {
-      min-height: 106px;
-      padding: 20px;
-      background: #fff;
-    }
-
-    .detail-card strong {
-      display: block;
-      color: var(--blue-ink);
-      font-size: 1.08rem;
-      margin-bottom: 8px;
-    }
-
-    .detail-card span {
-      color: var(--muted);
-      font-size: .94rem;
-      font-weight: 600;
-    }
-
-    .process-layout {
-      display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      gap: 52px;
-      align-items: center;
-    }
-
-    .process-copy h2 {
-      margin: 0;
-      color: var(--white);
-      font-family: "Noto Serif KR", serif;
-      font-size: clamp(2rem, 4vw, 3rem);
-      line-height: 1.28;
-    }
-
-    .process-copy p {
-      max-width: 500px;
-      margin: 18px 0 0;
-      color: rgba(255, 255, 255, .76);
-      font-weight: 600;
-    }
-
-    .process-points {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      margin-top: 32px;
-    }
-
-    .process-points div {
-      min-height: 112px;
-      padding: 18px;
-      border: 1px solid rgba(255, 255, 255, .18);
-      background: rgba(255, 255, 255, .07);
-    }
-
-    .process-points span {
-      display: block;
-      color: var(--gold-soft);
-      font-family: "Noto Serif KR", serif;
-      font-size: 1.3rem;
-      font-weight: 700;
-    }
-
-    .process-points strong {
-      display: block;
-      margin-top: 12px;
-      color: var(--white);
-      font-size: 1rem;
-      line-height: 1.45;
-    }
-
-    .process-panel {
-      border: 1px solid rgba(255, 255, 255, .22);
-      background: rgba(255, 255, 255, .06);
-    }
-
-    .process-panel img {
-      width: 100%;
-      background: #eef3f8;
-    }
-
-    .process-tags {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      background: var(--blue-ink);
-      color: var(--white);
-    }
-
-    .process-tags div {
-      min-height: 92px;
-      padding: 16px;
-      border-right: 1px solid rgba(255, 255, 255, .16);
-    }
-
-    .process-tags div:last-child {
-      border-right: 0;
-    }
-
-    .process-tags span {
-      display: block;
-      color: rgba(255, 255, 255, .62);
-      font-size: .78rem;
-      font-weight: 800;
-      margin-bottom: 4px;
-    }
-
-    .process-tags strong {
-      font-size: 1rem;
-      font-weight: 900;
-    }
-
-    .support-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-    }
-
-    .support-card {
-      min-height: 204px;
-      padding: 30px;
-      position: relative;
-    }
-
-    .support-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-bottom: 3px solid var(--classic-blue);
-      pointer-events: none;
-    }
-
-    .support-card span {
-      display: block;
-      margin-bottom: 18px;
-      color: var(--classic-blue);
-      font-family: "Noto Serif KR", serif;
-      font-size: 1.38rem;
-      font-weight: 700;
-    }
-
-    .support-card h3 {
-      margin: 0 0 12px;
-      color: var(--blue-ink);
-      font-size: 1.22rem;
-    }
-
-    .support-card p {
-      margin: 0;
-      color: var(--muted);
-      font-weight: 600;
-    }
-
-    .review-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-
-    .review-card {
-      min-height: 230px;
-      padding: 28px;
-      background: #fff;
-    }
-
-    .review-card strong {
-      display: block;
-      color: var(--classic-blue);
-      font-weight: 900;
-      margin-bottom: 14px;
-    }
-
-    .review-card p {
-      margin: 0;
-      color: var(--ink);
-      font-size: 1.02rem;
-      font-weight: 600;
-      line-height: 1.8;
-    }
-
-    .contact-layout {
-      display: grid;
-      grid-template-columns: .95fr 1.05fr;
-      gap: 24px;
-    }
-
-    .contact-card {
-      padding: 30px;
-      background: #fff;
-    }
-
-    .contact-card h3 {
-      margin: 0 0 22px;
-      padding-bottom: 16px;
-      border-bottom: 1px solid var(--line);
-      color: var(--blue-ink);
-      font-size: 1.42rem;
-    }
-
-    .info-list {
-      display: grid;
-      gap: 14px;
-      margin-top: 24px;
-    }
-
-    .info-row {
-      display: grid;
-      grid-template-columns: 96px 1fr;
-      gap: 18px;
-      padding-bottom: 14px;
-      border-bottom: 1px solid var(--line);
-      color: var(--muted);
-      font-weight: 600;
-    }
-
-    .info-row strong {
-      color: var(--classic-blue);
-    }
-
-    .notice-box {
-      margin-top: 24px;
-      padding: 20px;
-      color: var(--white);
-      background: var(--blue-ink);
-    }
-
-    .notice-box strong {
-      display: block;
-      margin-bottom: 6px;
-      color: var(--gold-soft);
-    }
-
-    .notice-box p {
-      margin: 0;
-      color: rgba(255, 255, 255, .76);
-      font-weight: 600;
-    }
-
-    .mini-proof {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-      margin-top: 14px;
-    }
-
-    .mini-proof div {
-      min-height: 92px;
-      padding: 16px;
-      border: 1px solid var(--line);
-      background: #fbfdff;
-    }
-
-    .mini-proof strong {
-      display: block;
-      margin-bottom: 6px;
-      color: var(--classic-blue);
-      font-size: .95rem;
-    }
-
-    .mini-proof span {
-      color: var(--muted);
-      font-size: .88rem;
-      font-weight: 700;
-    }
-
-    .field {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      margin-bottom: 15px;
-    }
-
-    .field label {
-      color: var(--blue-ink);
-      font-size: .94rem;
-      font-weight: 800;
-    }
-
-    .field input,
-    .field textarea,
-    .field select {
-      width: 100%;
-      min-height: 50px;
-      padding: 13px 14px;
-      border: 1px solid var(--line);
-      border-radius: 2px;
-      color: var(--ink);
-      background: #fff;
-      resize: vertical;
-    }
-
-    .field textarea {
-      min-height: 130px;
-    }
-
-    .field input::placeholder,
-    .field textarea::placeholder {
-      color: #9aa3ae;
-    }
-
-    .field input:focus,
-    .field textarea:focus,
-    .field select:focus {
-      border-color: var(--classic-blue);
-      box-shadow: var(--focus);
-      outline: 0;
-    }
-
-    .privacy {
-      min-height: 44px;
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      margin: 4px 0 18px;
-      color: var(--muted);
-      font-size: .92rem;
-      font-weight: 700;
-      cursor: pointer;
-    }
-
-    .privacy input {
-      width: 22px;
-      height: 22px;
-      margin-top: 3px;
-      flex: 0 0 auto;
-      accent-color: var(--classic-blue);
-    }
-
-    .form-message {
-      min-height: 22px;
-      margin: 14px 0 0;
-      color: var(--muted);
-      font-size: .92rem;
-      font-weight: 800;
-    }
-
-    .form-message.error {
-      color: var(--danger);
-    }
-
-    .form-message.success {
-      color: var(--success);
-    }
-
-    .footer {
-      color: rgba(255, 255, 255, .72);
-      background: var(--blue-ink);
-      border-top: 1px solid rgba(255, 255, 255, .1);
-    }
-
-    .footer-inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 36px;
-      padding: 42px 0 34px;
-    }
-
-    .footer strong {
-      display: block;
-      margin-bottom: 12px;
-      color: var(--white);
-      font-size: 1.15rem;
-    }
-
-    .footer p {
-      margin: 0;
-      font-size: .92rem;
-      line-height: 1.85;
-    }
-
-    .copyright {
-      padding: 18px 0 24px;
-      border-top: 1px solid rgba(255, 255, 255, .1);
-      color: rgba(255, 255, 255, .48);
-      font-size: .82rem;
-      text-align: center;
-    }
-
-    @media (max-width: 1060px) {
-      .nav {
-        gap: 16px;
-        font-size: .88rem;
-      }
-
-      .quick-layout,
-      .process-layout,
-      .contact-layout {
-        grid-template-columns: 1fr;
-      }
-
-      .detail-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-
-      .support-grid {
-        grid-template-columns: repeat(2, 1fr);
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800;900&family=Noto+Serif+KR:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LegalService",
+      "name": "이로택스 법무사 사무소",
+      "description": "개인회생, 개인파산, 법인회생, 법인파산 상담",
+      "telephone": "+82-2-598-8908",
+      "faxNumber": "+82-70-8270-0094",
+      "email": "leelawtax@gmail.com",
+      "priceRange": "상담 후 안내",
+      "areaServed": "KR",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "KR",
+        "addressRegion": "서울특별시",
+        "addressLocality": "서초구",
+        "streetAddress": "법원로 3길 24, 301호"
       }
     }
-
-    @media (max-width: 860px) {
-      .container {
-        width: min(100% - 36px, 720px);
-      }
-
-      .nav {
-        display: none;
-      }
-
-      .header-inner {
-        min-height: 78px;
-      }
-
-      .brand img {
-        width: 44px;
-        height: 44px;
-      }
-
-      .brand-name {
-        font-size: 1.08rem;
-      }
-
-      .brand-sub {
-        display: none;
-      }
-
-      .header-cta-full {
-        display: none;
-      }
-
-      .header-cta-short {
-        display: inline;
-      }
-
-      .hero,
-      .hero-inner {
-        min-height: auto;
-      }
-
-      .hero::after {
-        display: none;
-      }
-
-      .hero-inner {
-        grid-template-columns: 1fr;
-        padding: 64px 0 28px;
-      }
-
-      .hero h1 {
-        font-size: 2.22rem;
-        line-height: 1.18;
-      }
-
-      .hero-proof {
-        justify-self: stretch;
-        width: 100%;
-      }
-
-      .hero-metric {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-metric div:first-child {
-        border-right: 0;
-        border-bottom: 1px solid var(--line);
-      }
-
-      .hero-check {
-        grid-template-columns: 70px 1fr;
-        padding: 20px 24px;
-      }
-
-      .hero-phone {
-        position: relative;
-        left: auto;
-        bottom: auto;
-        transform: none;
-        width: calc(100% - 28px);
-        min-height: 54px;
-        margin: 0 auto 24px;
-        padding: 0 24px;
-        font-size: 1.12rem;
-      }
-
-      .hero-summary,
-      .quick-side,
-      .service-grid,
-      .detail-grid,
-      .support-grid,
-      .review-grid,
-      .footer-inner {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-summary {
-        width: calc(100% - 28px);
-      }
-
-      .hero-summary div {
-        border-right: 0;
-        border-bottom: 1px solid var(--line);
-      }
-
-      .hero-summary div:last-child {
-        border-bottom: 0;
-      }
-
-      .section {
-        padding: 54px 0;
-      }
-
-      .process-points,
-      .mini-proof {
-        grid-template-columns: 1fr;
-      }
-
-      .portrait-card img {
-        min-height: 360px;
-      }
-
-      .detail-head {
-        grid-template-columns: 1fr;
-        gap: 8px;
-      }
-
-      .detail-head p {
-        text-align: left;
-      }
-
-      .process-tags {
-        grid-template-columns: 1fr;
-      }
-
-      .process-tags div {
-        border-right: 0;
-        border-bottom: 1px solid rgba(255, 255, 255, .16);
-      }
-
-      .process-tags div:last-child {
-        border-bottom: 0;
-      }
-    }
-
-    @media (max-width: 560px) {
-      .container {
-        width: calc(100% - 28px);
-      }
-
-      .header-inner {
-        gap: 8px;
-      }
-
-      .brand {
-        gap: 10px;
-        min-width: 0;
-      }
-
-      .site-header .btn-primary {
-        min-height: 38px;
-        padding: 0 10px;
-        font-size: .78rem;
-      }
-
-      .hero-actions {
-        flex-direction: column;
-      }
-
-      .hero-actions .btn {
-        width: 100%;
-      }
-
-      .phone-cta a {
-        min-height: 66px;
-        flex-direction: column;
-        gap: 2px;
-      }
-
-      .overview-card,
-      .channel-card,
-      .service-card,
-      .detail-card,
-      .support-card,
-      .contact-card,
-      .review-card {
-        padding: 24px;
-      }
-
-      .overview-list a,
-      .overview-list div {
-        grid-template-columns: 42px 1fr;
-        gap: 12px;
-      }
-
-      .overview-list strong {
-        font-size: 1.18rem;
-      }
-
-      .info-row {
-        grid-template-columns: 1fr;
-        gap: 4px;
-      }
-    }
-
-    @media (max-width: 380px) {
-      .brand img {
-        width: 38px;
-        height: 38px;
-      }
-
-      .brand-name {
-        font-size: .95rem;
-      }
-
-      .site-header .btn-primary {
-        min-height: 36px;
-        padding: 0 9px;
-        font-size: .74rem;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      *, *::before, *::after {
-        transition: none !important;
-      }
-    }
-  </style>
+  </script>
 </head>
 <body>
-  <header class="site-header" id="siteHeader">
+  <a class="skip-link" href="#main">본문 바로가기</a>
+
+  <header class="site-header" aria-label="상단 메뉴">
     <div class="container header-inner">
-      <a class="brand" href="#hero" aria-label="이로택스 개인회생 메인으로 이동">
-        <img src="img/lee-logo.svg" alt="" />
+      <a class="brand" href="#hero" aria-label="이로택스 메인으로 이동">
+        <img src="assets/img/lee-logo.svg" alt="" />
         <span>
-          <span class="brand-name">이로택스</span>
-          <span class="brand-sub">개인회생 · 개인파산</span>
+          <strong>이로택스</strong>
+          <span>개인회생 · 개인파산</span>
         </span>
       </a>
-      <nav class="nav" aria-label="주요 메뉴">
-        <a href="#hero">메인</a>
-        <a href="#gateway">상담안내</a>
-        <a href="#services">업무영역</a>
-        <a href="#process">진행절차</a>
-        <a href="#contact">상담신청</a>
+
+      <nav class="nav" data-nav aria-label="주요 메뉴">
+        <a href="#audience">대상</a>
+        <a href="#rights">보호</a>
+        <a href="#diagnosis">진단</a>
+        <a href="#services">절차</a>
+        <a href="#cases">사례</a>
+        <a href="#contact">상담</a>
       </nav>
-      <a class="btn btn-primary header-cta" href="#contact">
-        <span class="header-cta-full">상담 신청</span>
-        <span class="header-cta-short">상담 신청</span>
-      </a>
+
+      <div class="header-actions">
+        <a class="btn btn-phone" href="tel:025988908">02-598-8908 <span aria-hidden="true">→</span></a>
+        <button class="menu-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false" data-menu-toggle>
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <section class="hero" id="hero" aria-labelledby="hero-title">
-      <div class="container hero-inner">
+      <div class="container hero-frame">
         <div class="hero-copy">
-          <p class="eyebrow">Lee Lawtax Debt Relief Team</p>
-          <h1 id="hero-title">채무의 압박을 멈추고, 다시 설계할 시간입니다.</h1>
-          <p class="hero-lead">20년 경력 개인회생 · 파산 전담팀이 변제금, 채권추심, 필요서류를 한 번에 정리합니다. 상담은 비밀보장을 기준으로 진행됩니다.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#contact">상담 신청</a>
-            <a class="btn btn-outline" href="#gateway">자가진단 보기</a>
+          <p class="eyebrow">Debt Relief Consultation</p>
+          <h1 id="hero-title">개인회생·파산 상담</h1>
+          <p class="hero-lead">가능성, 변제금, 추심 대응을 먼저 확인합니다.</p>
+
+          <div class="hero-actions" aria-label="주요 상담 행동">
+            <a class="btn btn-primary" href="#contact">무료상담 요청 <span aria-hidden="true">→</span></a>
+            <a class="btn btn-secondary" href="tel:025988908">전화상담</a>
           </div>
         </div>
 
-        <aside class="hero-proof" aria-label="핵심 상담 정보">
-          <div class="hero-proof-head">
-            <span>Confidential debt relief</span>
-            <strong>무료상담과 5분 변제금 자가진단을 한 화면에서 시작합니다.</strong>
+        <div class="trust-chips" aria-label="핵심 신뢰 안내">
+          <span>비밀보장</span>
+          <span>전국 비대면</span>
+          <span>서류 안내</span>
+          <span>분납 상담</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="proof-strip" id="proof" aria-label="이로택스 신뢰 지표">
+      <div class="container proof-grid">
+        <div>
+          <span>경력</span>
+          <strong>20년 도산절차 전담</strong>
+        </div>
+        <div>
+          <span>사례</span>
+          <strong>8,000건 이상 사건 경험</strong>
+        </div>
+        <div>
+          <span>상담</span>
+          <strong>무료상담 · 서류 안내</strong>
+        </div>
+        <div>
+          <span>연락</span>
+          <strong><a href="tel:025988908">02-598-8908</a></strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white section-standard" id="audience" aria-labelledby="audience-title">
+      <div class="container section-grid">
+        <div class="section-head">
+          <p class="section-kicker">Who Needs This</p>
+          <h2 class="section-title" id="audience-title">먼저 절차를 고르는 분들</h2>
+          <p class="section-copy">원본에 흩어져 있던 상담 대상 문구를 상담자가 바로 판단할 수 있는 첫 본문 섹션으로 옮겼습니다.</p>
+        </div>
+
+        <div class="section-body">
+          <div class="compact-grid six">
+            <article>
+              <span>판단 01</span>
+              <b>개인회생과 개인파산 중 무엇이 맞는지 모르는 분</b>
+            </article>
+            <article>
+              <span>판단 02</span>
+              <b>소득은 있지만 월 변제금이 감당되지 않는 분</b>
+            </article>
+            <article>
+              <span>판단 03</span>
+              <b>파산·면책 가능성과 불허가 리스크를 확인해야 하는 분</b>
+            </article>
+            <article>
+              <span>상황 01</span>
+              <b>방문 상담 시간이 어렵고 비대면 진행을 원하는 분</b>
+            </article>
+            <article>
+              <span>상황 02</span>
+              <b>수임료 부담 때문에 분납 가능 여부가 필요한 분</b>
+            </article>
+            <article>
+              <span>상황 03</span>
+              <b>타 사무실 상담 후 더 정확히 비교하고 싶은 분</b>
+            </article>
           </div>
-          <div class="hero-metric">
-            <div>
-              <span>원금 탕감 사례</span>
-              <strong>95%</strong>
-              <small>상황별 가능성은 상담 후 진단합니다.</small>
-            </div>
-            <div>
-              <span>사건 경험</span>
-              <strong>8,000+</strong>
-              <small>회생 · 파산 사건 경험을 바탕으로 진행 방향을 안내합니다.</small>
-            </div>
+
+          <div class="section-band">
+            <span>상담 전 목표는 하나입니다. 회생·파산·채무조정 중 지금 맞는 길을 먼저 좁히는 것입니다.</span>
+            <a href="#rights">먼저 보호 내용 보기</a>
           </div>
-          <div class="hero-checks">
-            <div class="hero-check">
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white section-standard" id="rights" aria-labelledby="rights-title">
+      <div class="container section-grid">
+        <div class="section-head">
+          <p class="section-kicker">Protection</p>
+          <h2 class="section-title" id="rights-title">법적 보호와 권리</h2>
+          <p class="section-copy">독촉, 비밀보장, 채권자 대응처럼 의뢰자가 가장 먼저 걱정하는 보호 정보를 한 섹션으로 묶었습니다.</p>
+        </div>
+
+        <div class="section-body">
+          <div class="card-grid three">
+            <article class="info-card">
               <span>01</span>
-              <div><strong>독촉과 추심 대응 먼저 정리</strong><small>진행 단계별 응대 방향을 안내합니다.</small></div>
-            </div>
-            <div class="hero-check">
+              <h3>채권추심 즉시 대응</h3>
+              <p>원본의 “독촉·연체 즉시 중지” 메시지를 진행 후 대응 순서로 안내합니다.</p>
+              <ul>
+                <li>독촉·연체 단계 확인</li>
+                <li>채권자 연락 대응</li>
+              </ul>
+            </article>
+            <article class="info-card">
               <span>02</span>
-              <div><strong>무방문 상담과 서류 리스트 제공</strong><small>필요한 자료만 빠르게 확인합니다.</small></div>
-            </div>
-            <div class="hero-check">
+              <h3>가족·회사 비밀보장</h3>
+              <p>배우자나 회사가 알까 걱정되는 경우 연락 방식과 진행 범위를 먼저 정합니다.</p>
+              <ul>
+                <li>본인 중심 연락</li>
+                <li>비밀 상담 원칙</li>
+              </ul>
+            </article>
+            <article class="info-card">
               <span>03</span>
-              <div><strong>수임료 할인과 분납 안내</strong><small>시작 부담을 줄이는 기준을 확인합니다.</small></div>
+              <h3>다시 시작할 권리</h3>
+              <p>채무가 많은 것이 잘못이 아니라, 법으로 보호받고 회복할 수 있는 길이 있다는 메시지를 분명히 보여줍니다.</p>
+              <ul>
+                <li>변제금·기간 진단</li>
+                <li>필요서류 리스트 제공</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="section-band">
+            <span>서비스가 아니라 당연한 권리입니다. 진행 후의 불안까지 먼저 설명해야 상담이 됩니다.</span>
+            <a href="#diagnosis">진단 항목 보기</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-paper section-standard" id="diagnosis" aria-labelledby="diagnosis-title">
+      <div class="container section-grid">
+        <div class="section-head">
+          <p class="section-kicker">First Check</p>
+          <h2 class="section-title" id="diagnosis-title">5분 변제금 자가진단</h2>
+          <p class="section-copy">원본 상담 항목을 기준으로 가능성과 변제금 방향을 먼저 확인합니다.</p>
+        </div>
+
+        <div class="section-body">
+          <div class="card-grid three">
+            <article class="info-card">
+              <span>01</span>
+              <h3>총채무액</h3>
+              <p>대출, 카드, 대부업, 사채, 보증채무를 구분합니다.</p>
+              <ul>
+                <li>채권자 수</li>
+                <li>채무 원인</li>
+              </ul>
+            </article>
+            <article class="info-card">
+              <span>02</span>
+              <h3>총재산·소득</h3>
+              <p>재산과 소득을 같이 보고 변제 기준을 봅니다.</p>
+              <ul>
+                <li>월 소득</li>
+                <li>부양가족·재산</li>
+              </ul>
+            </article>
+            <article class="info-card">
+              <span>03</span>
+              <h3>연령·지역·추심</h3>
+              <p>거주지역과 현재 독촉·압류 단계를 확인합니다.</p>
+              <ul>
+                <li>거주지역·연령</li>
+                <li>압류·명령 여부</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="section-support">
+            <strong>원본 자가진단 항목을 빠짐없이 반영했습니다.</strong>
+            <ul class="check-stack">
+              <li><span>채무</span><b>총채무액과 채권수</b></li>
+              <li><span>재산</span><b>총재산과 주거 형태</b></li>
+              <li><span>소득</span><b>월 급여·사업소득 여부</b></li>
+              <li><span>기본</span><b>연령과 거주지역</b></li>
+              <li><span>원인</span><b>채무 발생 사유</b></li>
+              <li><span>연락</span><b>상담 받을 연락처</b></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white section-standard" id="services" aria-labelledby="services-title">
+      <div class="container section-grid">
+        <div class="section-head">
+          <p class="section-kicker">Services</p>
+          <h2 class="section-title" id="services-title">절차별 상담</h2>
+          <p class="section-copy">개인과 법인의 회생·파산을 분리해 검토합니다.</p>
+        </div>
+
+        <div class="section-body">
+          <div class="card-grid four">
+            <article class="service-card">
+              <span>01</span>
+              <h3>개인회생</h3>
+              <p>소득이 있는 채무자의 변제계획 상담</p>
+              <ul>
+                <li>신청 가능성</li>
+                <li>월 변제금 방향</li>
+              </ul>
+              <button type="button" data-service-shortcut="개인회생">이 분야 상담 요청</button>
+            </article>
+            <article class="service-card">
+              <span>02</span>
+              <h3>개인파산</h3>
+              <p>상환이 어려운 경우 면책 가능성 검토</p>
+              <ul>
+                <li>면책 불허가 리스크</li>
+                <li>재산·소득 정리</li>
+              </ul>
+              <button type="button" data-service-shortcut="개인파산">이 분야 상담 요청</button>
+            </article>
+            <article class="service-card">
+              <span>03</span>
+              <h3>법인회생</h3>
+              <p>사업 유지와 채권자 대응 방향 검토</p>
+              <ul>
+                <li>영업 계속 가능성</li>
+                <li>채권자 대응 순서</li>
+              </ul>
+              <button type="button" data-service-shortcut="법인회생">이 분야 상담 요청</button>
+            </article>
+            <article class="service-card">
+              <span>04</span>
+              <h3>법인파산</h3>
+              <p>법인 정리와 대표자 리스크 확인</p>
+              <ul>
+                <li>폐업·청산 흐름</li>
+                <li>대표자 보증채무</li>
+              </ul>
+              <button type="button" data-service-shortcut="법인파산">이 분야 상담 요청</button>
+            </article>
+          </div>
+
+          <div class="section-band">
+            <span>카드의 상담 요청을 누르면 해당 분야가 상담폼에 자동 반영됩니다.</span>
+            <a href="#contact">상담 정보 남기기</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-paper section-standard" id="method" aria-labelledby="method-title">
+      <div class="container section-grid">
+        <div class="section-head">
+          <p class="section-kicker">Method</p>
+          <h2 class="section-title" id="method-title">차별화된 진행방식</h2>
+          <p class="section-copy">원본 이미지의 무방문·무서류 상담 흐름을 섹션으로 옮겼습니다.</p>
+        </div>
+
+        <div class="section-body">
+          <div class="notice-panel">
+            <strong>채무조정 지원센터만의 특별한 진행 방식</strong>
+            <p>원본의 개인회생·신용회복·통대환 비교 흐름은 그대로 살리되, 현재 페이지에서는 “절차 판단 → 비대면 상담 → 서류 안내 → 비용 부담 완화”의 업무 흐름으로 재구성했습니다.</p>
+          </div>
+
+          <div class="card-grid four method-grid">
+            <article class="info-card">
+              <span>01</span>
+              <h3>절차 판단</h3>
+              <p>개인회생, 개인파산, 신용회복 등 가능한 길을 먼저 구분합니다.</p>
+            </article>
+            <article class="info-card">
+              <span>02</span>
+              <h3>무방문 상담</h3>
+              <p>전국 어디서나 전화와 비대면 상담으로 1차 검토를 진행합니다.</p>
+            </article>
+            <article class="info-card">
+              <span>03</span>
+              <h3>서류 준비 안내</h3>
+              <p>복잡한 서류를 한 번에 알 수 있게 준비 순서와 대행 가능 범위를 정리합니다.</p>
+            </article>
+            <article class="info-card">
+              <span>04</span>
+              <h3>분납·비용 조율</h3>
+              <p>수임료 부담이 있는 경우 분납 가능 여부와 비용 안내를 상담합니다.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-ink section-standard" id="process" aria-labelledby="process-title">
+      <div class="container section-grid">
+        <div class="section-head">
+          <p class="section-kicker">Process</p>
+          <h2 class="section-title" id="process-title">진행 흐름</h2>
+          <p class="section-copy">상담부터 접수 준비까지 순서를 고정합니다.</p>
+        </div>
+
+        <div class="section-body">
+          <div class="step-grid">
+            <article>
+              <span>1</span>
+              <h3>상담신청</h3>
+              <p>연락처와 현재 상황을 남깁니다.</p>
+              <em>채무·소득·추심 상태를 먼저 확인</em>
+            </article>
+            <article>
+              <span>2</span>
+              <h3>1:1 전문 무료상담</h3>
+              <p>소득·재산·채무를 기준으로 절차를 분류합니다.</p>
+              <em>회생·파산 중 맞는 절차 분류</em>
+            </article>
+            <article>
+              <span>3</span>
+              <h3>서류준비대행</h3>
+              <p>필요자료와 준비 순서를 안내합니다.</p>
+              <em>일부서류 대행 발급 및 자료 체크</em>
+            </article>
+            <article>
+              <span>4</span>
+              <h3>접수전 1:1 사전검토</h3>
+              <p>변제금과 리스크를 확인합니다.</p>
+              <em>접수 전 변제계획과 누락 자료 확인</em>
+            </article>
+            <article>
+              <span>5</span>
+              <h3>접수완료</h3>
+              <p>진행 일정과 다음 대응을 안내합니다.</p>
+              <em>채권추심 대응과 이후 일정 정리</em>
+            </article>
+          </div>
+
+          <div class="process-summary" aria-label="상담 후 정리되는 내용">
+            <strong>상담 후 정리되는 것</strong>
+            <span>절차 방향</span>
+            <span>예상 준비서류</span>
+            <span>변제금·기간</span>
+            <span>추심 대응 순서</span>
+            <span>접수 전 검토</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-paper section-standard" id="cases" aria-labelledby="cases-title">
+      <div class="container section-grid">
+        <div class="section-head">
+          <p class="section-kicker">Reduction Cases</p>
+          <h2 class="section-title" id="cases-title">탕감 가능성과 사례</h2>
+          <p class="section-copy">원본 이미지에 있던 “최대 95%”, 92%, 90% 사례는 결과 보장이 아니라 상담에서 확인할 수 있는 사례 근거로 배치했습니다.</p>
+        </div>
+
+        <div class="section-body">
+          <div class="case-grid">
+            <article><strong>95%</strong><span>원금 탕감 사례</span></article>
+            <article><strong>92%</strong><span>택시기사 개인회생</span></article>
+            <article><strong>95%</strong><span>전세사기 피해자 개인회생 산정</span></article>
+            <article><strong>95%</strong><span>보험설계사 개인회생</span></article>
+            <article><strong>90%</strong><span>개인회생 탕감 사례</span></article>
+            <article><strong>90%</strong><span>채무조정 산정 사례</span></article>
+          </div>
+
+          <div class="card-grid three">
+            <article class="info-card">
+              <span>범위</span>
+              <h3>모든 빚 검토</h3>
+              <p>은행대출, 카드, 대부업, 사채 등 채무 종류를 나눠 검토합니다.</p>
+            </article>
+            <article class="info-card">
+              <span>변수</span>
+              <h3>소득·재산 반영</h3>
+              <p>탕감률은 소득, 재산, 부양가족, 채무 원인에 따라 달라집니다.</p>
+            </article>
+            <article class="info-card">
+              <span>목표</span>
+              <h3>최저 변제금 방향</h3>
+              <p>무리한 약속보다 변제 가능한 범위를 먼저 찾는 것이 중요합니다.</p>
+            </article>
+          </div>
+
+          <p class="case-note">사례와 탕감률은 개인별 채무, 소득, 재산, 법원 판단에 따라 달라질 수 있습니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white section-focus" id="repayment" aria-labelledby="repayment-title">
+      <div class="container section-grid">
+        <div class="section-head">
+          <p class="section-kicker">Repayment Examples</p>
+          <h2 class="section-title" id="repayment-title">변제금이 줄어든 예시</h2>
+          <p class="section-copy">원본의 월 상환금 비교 문구는 따로 떼어내어 상담자가 가장 직관적으로 볼 수 있게 구성했습니다.</p>
+        </div>
+
+        <div class="section-body">
+          <div class="comparison-grid comparison-large">
+            <article>
+              <span>자영업자 서모씨</span>
+              <b>총 1억 8천만원 채무</b>
+              <p><strong>월 500만원</strong> 상환 부담에서 <strong>월 45만원</strong> 방향으로 조정된 사례</p>
+            </article>
+            <article>
+              <span>직장인 이모씨</span>
+              <b>총 1억 3천만원 채무</b>
+              <p><strong>월 361만원</strong> 상환 부담에서 <strong>월 43만원</strong> 방향으로 조정된 사례</p>
+            </article>
+          </div>
+
+          <div class="section-band">
+            <span>정확한 변제금은 자료 확인 후 산정됩니다. 상담에서는 먼저 월 부담이 줄어들 가능성을 확인합니다.</span>
+            <a href="#contact">변제금 상담</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white section-standard" id="criteria" aria-labelledby="criteria-title">
+      <div class="container section-grid">
+        <div class="section-head">
+          <p class="section-kicker">Criteria</p>
+          <h2 class="section-title" id="criteria-title">개인회생 선정 시 중요사항</h2>
+          <p class="section-copy">같은 의뢰라도 경험, 분석, 진행 방식에 따라 결과 방향이 달라질 수 있습니다.</p>
+        </div>
+
+        <div class="section-body">
+          <div class="card-grid four">
+            <article class="info-card">
+              <span>01</span>
+              <h3>전담팀 직접 관리</h3>
+              <p>전담팀이 직접 사건을 관리하는지 확인합니다.</p>
+            </article>
+            <article class="info-card">
+              <span>02</span>
+              <h3>다양한 경험과 실력</h3>
+              <p>폭넓은 사례 경험과 분석 능력을 확인합니다.</p>
+            </article>
+            <article class="info-card">
+              <span>03</span>
+              <h3>기각 시 환불 기준</h3>
+              <p>기각 시 전액 환불 가능 여부와 조건을 확인합니다.</p>
+            </article>
+            <article class="info-card">
+              <span>04</span>
+              <h3>투명한 수임료·진행</h3>
+              <p>비용과 진행 과정이 명확하게 안내되는지 확인합니다.</p>
+            </article>
+          </div>
+
+          <div class="section-band">
+            <span>얼마나 경험이 있는지, 정확히 분석하는지, 투명하게 진행하는지가 중요합니다.</span>
+            <a href="#contact">검토 요청</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-paper section-focus" id="representative" aria-labelledby="representative-title">
+      <div class="container section-grid">
+        <div class="section-head">
+          <p class="section-kicker">Representative</p>
+          <h2 class="section-title" id="representative-title">이로택스 대표 법무사</h2>
+          <p class="section-copy">원본 사이트의 대표자 소개와 드리는 말씀을 상담 신뢰 섹션으로 정리했습니다.</p>
+        </div>
+
+        <div class="section-body">
+          <div class="profile-panel">
+            <div>
+              <span>도산법 전문 법무사</span>
+              <h3>이승용 법무사</h3>
+              <p>20년 동안 개인회생 전담팀을 운영하며 다양한 사례를 접하고 해결해온 경험을 바탕으로 상담합니다.</p>
+              <ul>
+                <li>02-598-8908</li>
+                <li>leelawtax@gmail.com</li>
+                <li>서울 서초구 법원로 3길 24, 301호</li>
+              </ul>
             </div>
+            <blockquote>
+              혼자 감당하기에는 무거운 빚과 계속 늘어나는 부채로 걱정이 많으실 겁니다. 혼자 고민하지 마시고 무료상담으로 털어놓으세요. 상황에 맞춰 솔루션과 해결 가이드를 드리겠습니다.
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white section-focus" id="reviews" aria-labelledby="reviews-title">
+      <div class="container section-grid">
+        <div class="section-head">
+          <p class="section-kicker">Reviews</p>
+          <h2 class="section-title" id="reviews-title">개인회생 실제 후기</h2>
+          <p class="section-copy">원본 사이트에 있던 후기를 익명 처리 형태로 보존했습니다.</p>
+        </div>
+
+        <div class="section-body">
+          <div class="quote-grid">
+            <article>
+              <span>개인회생 X성X 님</span>
+              <p>“제가 정말 죽고 싶은 순간도 많았고 좌절하고 있을 때 이렇게 도와주신 덕분에 정말 살았습니다.”</p>
+            </article>
+            <article>
+              <span>개인파산 X승X 님</span>
+              <p>“선생님 덕분에 간만에 두 다리 뻗고 편하게 잠을 잤습니다. 그동안 너무 감사드립니다.”</p>
+            </article>
+            <article>
+              <span>개인회생 X선X 님</span>
+              <p>“개인회생이 처음이라 많이 물었는데 항상 친절하셨고, 덕분에 이제야 숨쉰다고 표현할 수 있습니다.”</p>
+            </article>
+            <article>
+              <span>개인회생 X보X 님</span>
+              <p>“마지막으로 던진 상담신청이 희망이 될지는 상상도 못했습니다. 이렇게 도와주신 덕에 살았습니다.”</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-paper section-standard" id="benefits" aria-labelledby="benefits-title">
+      <div class="container section-grid">
+        <div class="section-head">
+          <p class="section-kicker">Cost Support</p>
+          <h2 class="section-title" id="benefits-title">비용 부담과 혜택</h2>
+          <p class="section-copy">원본의 수임료 부담 완화, 분납, 홈페이지 신청 혜택 문구를 별도 섹션으로 분리했습니다.</p>
+        </div>
+
+        <div class="section-body">
+          <div class="notice-panel">
+            <strong>빚도 있는데 개인회생 비용이 부담되시죠?</strong>
+            <p>높은 탕감률을 지향하며 수임료 할인과 분납 상담으로 의뢰인의 부담을 함께 낮추는 방향을 안내합니다.</p>
+          </div>
+
+          <div class="card-grid four">
+            <article class="info-card">
+              <span>01</span>
+              <h3>무료상담</h3>
+              <p>상담은 편하게 시작할 수 있도록 무료 상담 문구를 유지했습니다.</p>
+            </article>
+            <article class="info-card">
+              <span>02</span>
+              <h3>수임료 분납</h3>
+              <p>분납 가능 여부와 부담 완화 방향을 상담합니다.</p>
+            </article>
+            <article class="info-card">
+              <span>03</span>
+              <h3>홈페이지 혜택</h3>
+              <p>원본의 “홈페이지 신청 시 10만원 추가 혜택” 내용을 보존했습니다.</p>
+            </article>
+            <article class="info-card">
+              <span>04</span>
+              <h3>추심 중지 기대</h3>
+              <p>진행 후 채권추심 대응과 중지 가능성을 상담 단계에서 설명합니다.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white section-standard" id="why" aria-labelledby="why-title">
+      <div class="container section-grid">
+        <div class="section-head">
+          <p class="section-kicker">Why Leelawtax</p>
+          <h2 class="section-title" id="why-title">끝까지 관리하는 이유</h2>
+          <p class="section-copy">원본 WHY 리스트는 비용 섹션과 분리해 실제 운영 기준처럼 보이도록 재배치했습니다.</p>
+        </div>
+
+        <div class="section-body">
+          <ul class="why-list">
+            <li>비밀보장, 배우자도 모르게 진행할 수 있도록 상담합니다.</li>
+            <li>종결까지 집요하게 관리합니다.</li>
+            <li>18년 이상 다양한 노하우와 폭넓은 사례 경험을 안내합니다.</li>
+            <li>개인회생 전담팀 운영으로 전문적으로 관리합니다.</li>
+            <li>최저변제금, 최대면책 방향을 검토합니다.</li>
+            <li>정확한 진단과 이해하기 쉬운 가이드를 제공합니다.</li>
+            <li>빠르고 확실한 서류 준비를 중요하게 봅니다.</li>
+            <li>높은 탕감률 사례를 기반으로 상담합니다.</li>
+          </ul>
+
+          <div class="section-band">
+            <span>원본의 장점 문구를 단순 홍보가 아니라 상담 운영 기준으로 다시 정리했습니다.</span>
+            <a href="#contact">상담 시작하기</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white section-utility" id="faq" aria-labelledby="faq-title">
+      <div class="container section-grid">
+        <div class="section-head">
+          <p class="section-kicker">FAQ</p>
+          <h2 class="section-title" id="faq-title">자주 묻는 질문</h2>
+          <p class="section-copy">상담 전에 가장 많이 확인하는 내용입니다.</p>
+        </div>
+
+        <div class="section-body">
+          <div class="faq-list" data-faq-list>
+            <article class="faq-item is-open">
+              <button type="button" aria-expanded="true">
+                개인회생은 누가 신청하나요?
+                <span aria-hidden="true"></span>
+              </button>
+              <div class="faq-answer">
+                <p>원본 기준으로 일정한 소득이 있다면 아르바이트, 일용직, 신용불량자도 1차 검토가 가능합니다.</p>
+              </div>
+            </article>
+            <article class="faq-item">
+              <button type="button" aria-expanded="false">
+                가족이나 회사가 알게 되나요?
+                <span aria-hidden="true"></span>
+              </button>
+              <div class="faq-answer">
+                <p>본인 이외에는 알 수 없도록 비밀보장과 연락 대응 방식을 먼저 상담합니다.</p>
+              </div>
+            </article>
+            <article class="faq-item">
+              <button type="button" aria-expanded="false">
+                추심이 시작돼도 상담 가능한가요?
+                <span aria-hidden="true"></span>
+              </button>
+              <div class="faq-answer">
+                <p>가능합니다. 현재 단계에 맞춰 먼저 할 일과 피해야 할 일을 정리합니다.</p>
+              </div>
+            </article>
+            <article class="faq-item">
+              <button type="button" aria-expanded="false">
+                가능한 빚의 종류는?
+                <span aria-hidden="true"></span>
+              </button>
+              <div class="faq-answer">
+                <p>은행대출, 카드, 대부업, 사채 등 여러 채무를 상담할 수 있습니다. 투자, 도박, 물품결제 대금 등은 사유와 자료를 함께 확인합니다.</p>
+              </div>
+            </article>
+            <article class="faq-item">
+              <button type="button" aria-expanded="false">
+                변제금은 상담에서 바로 알 수 있나요?
+                <span aria-hidden="true"></span>
+              </button>
+              <div class="faq-answer">
+                <p>정확한 금액은 자료 확인이 필요하지만, 소득과 부양가족 기준으로 변제금 방향은 먼저 볼 수 있습니다.</p>
+              </div>
+            </article>
+            <article class="faq-item">
+              <button type="button" aria-expanded="false">
+                지방에서도 상담할 수 있나요?
+                <span aria-hidden="true"></span>
+              </button>
+              <div class="faq-answer">
+                <p>전화와 비대면 상담으로 1차 검토가 가능합니다. 사건 진행 방식은 상황에 맞춰 안내합니다.</p>
+              </div>
+            </article>
+            <article class="faq-item">
+              <button type="button" aria-expanded="false">
+                개인회생 후 사회생활은 가능한가요?
+                <span aria-hidden="true"></span>
+              </button>
+              <div class="faq-answer">
+                <p>통장개설, 휴대전화 개통, 직장 취업, 사업자등록, 부동산 거래 등은 사안별로 제한 여부를 확인해 안내합니다.</p>
+              </div>
+            </article>
+            <article class="faq-item">
+              <button type="button" aria-expanded="false">
+                수임료 부담은 어떻게 하나요?
+                <span aria-hidden="true"></span>
+              </button>
+              <div class="faq-answer">
+                <p>상담에서 할인, 분납 가능 여부와 비용 부담을 줄이는 방향을 안내합니다.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="section-band faq-band">
+            <span>답변이 애매한 경우에는 현재 상황을 기준으로 먼저 판단합니다.</span>
+            <a href="tel:025988908">전화로 확인</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section section-utility" id="contact" aria-labelledby="contact-title">
+      <div class="container section-grid contact-grid">
+        <aside class="section-head contact-panel" aria-label="상담 연락처">
+          <p class="section-kicker">Contact</p>
+          <h2 class="section-title" id="contact-title">상황만 남겨주세요.</h2>
+          <p class="section-copy">빠른 상담은 전화가 가장 좋습니다. 통화가 어렵다면 아래 양식으로 남겨 주세요.</p>
+
+          <div class="contact-list">
+            <div>
+              <span>전화</span>
+              <a href="tel:025988908">02-598-8908</a>
+            </div>
+            <div>
+              <span>이메일</span>
+              <a href="mailto:leelawtax@gmail.com">leelawtax@gmail.com</a>
+            </div>
+            <div>
+              <span>주소</span>
+              <b>서울특별시 서초구 법원로 3길 24, 301호</b>
+            </div>
+          </div>
+
+          <div class="contact-note-grid" aria-label="상담 전에 준비하면 좋은 내용">
+            <span>채무 대략 금액</span>
+            <span>월 소득 여부</span>
+            <span>연체·압류 단계</span>
           </div>
         </aside>
-      </div>
-      <a class="hero-phone" href="tel:025988908" aria-label="무료상담 전화 02-598-8908">TEL 02-598-8908</a>
-    </section>
 
-    <div class="hero-summary" aria-label="핵심 신뢰 지표">
-      <div>
-        <span>01 경력</span>
-        <strong>20년 경력의 개인회생 · 파산 전담팀</strong>
-      </div>
-      <div>
-        <span>02 사례</span>
-        <strong>8,000건 이상 사건 경험과 높은 탕감률 노하우</strong>
-      </div>
-      <div>
-        <span>03 진행</span>
-        <strong>전국 진행 가능, 무방문 상담과 서류 안내</strong>
-      </div>
-    </div>
-
-    <section class="section section-soft" id="gateway" aria-labelledby="gateway-title">
-      <div class="container">
-        <div class="section-head center">
-          <p class="section-kicker">Consultation Gateway</p>
-          <h2 class="section-title" id="gateway-title">지금 필요한 상담으로 바로 연결됩니다.</h2>
-          <p class="section-copy">불필요한 설명을 줄이고, 상담 신청과 변제금 자가진단 두 가지 길만 남겼습니다.</p>
-        </div>
-
-        <div class="quick-layout">
-          <article class="portrait-card">
-            <img src="img/office-process.svg" alt="이로택스 상담 프로세스를 상징하는 이미지" />
-            <div class="portrait-label">
-              <span>Debt Relief Process</span>
-              <strong>상담부터 접수까지 전담 관리</strong>
-            </div>
-          </article>
-
-          <div class="quick-side">
-            <article class="overview-card">
-              <div class="overview-title">Core Relief Group</div>
-              <div class="overview-list">
-                <a href="#detail-personal">
-                  <span>01</span>
-                  <strong>개인회생</strong>
-                </a>
-                <a href="#detail-bankruptcy">
-                  <span>02</span>
-                  <strong>개인파산</strong>
-                </a>
-                <a href="#detail-support">
-                  <span>03</span>
-                  <strong>채무조정 지원</strong>
-                </a>
-              </div>
-              <a class="btn btn-blue" href="#contact">상담 신청</a>
-            </article>
-
-            <article class="channel-card gold">
-              <div>
-                <small>5 Minute Check</small>
-                <h3>개인회생 5분 변제금 자가진단</h3>
-                <p>총채무액, 재산, 소득 상황을 바탕으로 예상 변제 방향을 빠르게 확인합니다.</p>
-              </div>
-              <a class="link" href="#contact">자가진단 남기기 →</a>
-            </article>
-
-            <article class="channel-card">
-              <div>
-                <small>Private Call</small>
-                <h3>무료 전화상담</h3>
-                <p>비밀보장을 전제로 현재 상황과 채권추심 대응을 먼저 정리합니다.</p>
-              </div>
-              <a class="link" href="tel:025988908">02-598-8908 →</a>
-            </article>
+        <div class="form-panel">
+          <h3>무료 상담 요청</h3>
+          <p class="form-intro">필수 정보만 먼저 남겨도 상담 방향을 정리할 수 있습니다.</p>
+          <div class="form-summary" aria-label="상담 회신 흐름">
+            <span>1차 확인</span>
+            <span>전화 회신</span>
+            <span>서류 안내</span>
           </div>
-        </div>
-
-        <div class="phone-cta" aria-label="상담 전화 안내">
-          <a href="tel:025988908">
-            <span>전국 진행가능 / 무료상담</span>
-            <strong>02-598-8908</strong>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-white" id="services" aria-labelledby="services-title">
-      <div class="container">
-        <div class="section-head center">
-          <p class="section-kicker">Core Services</p>
-          <h2 class="section-title" id="services-title">핵심 업무만 남긴 채무조정 안내</h2>
-          <p class="section-copy">개인회생, 개인파산, 그리고 진행 중 필요한 실무 지원을 한 흐름으로 정리했습니다.</p>
-        </div>
-
-        <div class="service-grid">
-          <a class="service-card" href="#detail-personal">
-            <span>01</span>
-            <h3>개인회생</h3>
-            <p>소득이 있는 분의 변제금과 변제기간을 진단하고, 최대한 합리적인 변제계획을 세웁니다.</p>
-          </a>
-          <a class="service-card" href="#detail-bankruptcy">
-            <span>02</span>
-            <h3>개인파산</h3>
-            <p>상환이 어려운 상황에서 면책 가능성과 필요한 절차를 검토합니다.</p>
-          </a>
-          <a class="service-card" href="#detail-support">
-            <span>03</span>
-            <h3>채무조정 지원</h3>
-            <p>대출, 카드, 대부업, 사채까지 채무 원인과 채권 수에 맞춰 대응 방향을 안내합니다.</p>
-          </a>
-        </div>
-
-        <div class="detail-group" id="detail-personal">
-          <div class="detail-head">
-            <h3>개인회생 핵심 진단</h3>
-            <p>탕감률은 경험, 분석, 투명한 진행에서 달라집니다.</p>
-          </div>
-          <div class="detail-grid">
-            <article class="detail-card"><strong>변제금 계산</strong><span>총채무액, 재산, 소득 기준 확인</span></article>
-            <article class="detail-card"><strong>변제기간 검토</strong><span>상황별 상환 가능 기간 정리</span></article>
-            <article class="detail-card"><strong>채권추심 대응</strong><span>진행 시 전담팀이 응대 방향 안내</span></article>
-            <article class="detail-card"><strong>서류 리스트</strong><span>필요서류 안내와 일부서류 발급 지원</span></article>
-          </div>
-        </div>
-
-        <div class="detail-group" id="detail-bankruptcy">
-          <div class="detail-head">
-            <h3>개인파산 검토</h3>
-            <p>혼자 판단하지 않도록 면책 가능성을 먼저 확인합니다.</p>
-          </div>
-          <div class="detail-grid">
-            <article class="detail-card"><strong>상환 불능 상황</strong><span>소득, 재산, 채무 규모 종합 확인</span></article>
-            <article class="detail-card"><strong>면책 방향</strong><span>사례와 절차 기준으로 가능성 검토</span></article>
-            <article class="detail-card"><strong>비밀보장</strong><span>상담 내용과 진행 정보 보호</span></article>
-            <article class="detail-card"><strong>환불 안내</strong><span>회생과 파산 기각 시 환불 기준 안내</span></article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-blue" id="process" aria-labelledby="process-title">
-      <div class="container process-layout">
-        <div class="process-copy">
-          <p class="eyebrow">Process</p>
-          <h2 id="process-title">무서류, 무방문, 신속한 프로세스.</h2>
-          <p>상담신청 후 1:1 무료상담, 서류준비, 사전검토, 접수완료까지 순서대로 관리합니다. 의뢰자는 복잡한 절차보다 필요한 결정에만 집중하실 수 있습니다.</p>
-          <div class="process-points" aria-label="진행 핵심">
-            <div><span>01</span><strong>현재 채무 구조를 먼저 정리</strong></div>
-            <div><span>02</span><strong>예상 변제금과 가능 방향 확인</strong></div>
-            <div><span>03</span><strong>접수 전 서류와 리스크 재검토</strong></div>
-          </div>
-        </div>
-        <div class="process-panel">
-          <img src="img/team-docs.svg" alt="전담팀 문서 검토를 상징하는 이미지" />
-          <div class="process-tags" aria-label="진행 절차">
-            <div><span>01</span><strong>상담신청</strong></div>
-            <div><span>02</span><strong>1:1 무료상담</strong></div>
-            <div><span>03</span><strong>서류준비</strong></div>
-            <div><span>04</span><strong>사전검토</strong></div>
-            <div><span>05</span><strong>접수완료</strong></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-soft" id="support" aria-labelledby="support-title">
-      <div class="container">
-        <div class="section-head center">
-          <p class="section-kicker">Why Lee Lawtax</p>
-          <h2 class="section-title" id="support-title">의뢰자가 실제로 필요한 지원만 남겼습니다.</h2>
-          <p class="section-copy">서비스가 아니라 권리라는 기준으로, 사건 진행 중 꼭 필요한 부분을 전담팀이 챙깁니다.</p>
-        </div>
-        <div class="support-grid">
-          <article class="support-card">
-            <span>01</span>
-            <h3>비밀보장</h3>
-            <p>배우자와 가족에게 알리고 싶지 않은 상황까지 고려해 상담합니다.</p>
-          </article>
-          <article class="support-card">
-            <span>02</span>
-            <h3>전담팀 관리</h3>
-            <p>20년 경력의 도산법 전담팀이 사건 흐름을 직접 관리합니다.</p>
-          </article>
-          <article class="support-card">
-            <span>03</span>
-            <h3>추심 대응</h3>
-            <p>숨막히는 독촉과 추심에 대해 진행 단계별 대응 방향을 안내합니다.</p>
-          </article>
-          <article class="support-card">
-            <span>04</span>
-            <h3>비용 부담 완화</h3>
-            <p>수임료 할인과 분납 기준을 안내해 시작 부담을 낮춥니다.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-white" id="reviews" aria-labelledby="reviews-title">
-      <div class="container">
-        <div class="section-head center">
-          <p class="section-kicker">Real Reviews</p>
-          <h2 class="section-title" id="reviews-title">고민을 오래 할수록 빚만 늘어납니다.</h2>
-          <p class="section-copy">원본 후기 중 전환에 필요한 신뢰 문장만 간결하게 배치했습니다.</p>
-        </div>
-        <div class="review-grid">
-          <article class="review-card">
-            <strong>개인회생 X성X 님</strong>
-            <p>“좌절하고 있을 때 이렇게 도와주신 덕분에 정말 살았습니다.”</p>
-          </article>
-          <article class="review-card">
-            <strong>개인파산 X승X 님</strong>
-            <p>“선생님 덕분에 간만에 두 다리 뻗고 편하게 잠을 잤습니다.”</p>
-          </article>
-          <article class="review-card">
-            <strong>개인회생 X보X 님</strong>
-            <p>“마지막으로 던진 상담신청이 희망이 될지는 상상도 못했습니다.”</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-white" id="contact" aria-labelledby="contact-title">
-      <div class="container">
-        <div class="section-head center">
-          <p class="section-kicker">Contact</p>
-          <h2 class="section-title" id="contact-title">무료상담으로 시작해서 새로운 삶을 준비하세요.</h2>
-          <p class="section-copy">이름, 연락처, 현재 상황만 남기면 전담팀이 상담 방향을 확인합니다.</p>
-        </div>
-
-        <div class="contact-layout">
-          <article class="contact-card">
-            <h3>상담 안내</h3>
-            <div class="info-list">
-              <div class="info-row">
-                <strong>전화</strong>
-                <span><a href="tel:025988908">02-598-8908</a></span>
-              </div>
-              <div class="info-row">
-                <strong>메일</strong>
-                <span><a href="mailto:leelawtax@gmail.com">leelawtax@gmail.com</a></span>
-              </div>
-              <div class="info-row">
-                <strong>주소</strong>
-                <span>서울특별시 서초구 법원로 3길 24, 301호</span>
-              </div>
-              <div class="info-row">
-                <strong>담당</strong>
-                <span>대표법무사 이승용 · 광고책임담당자 이승용</span>
-              </div>
-            </div>
-            <div class="notice-box">
-              <strong>상담 전 확인</strong>
-              <p>총채무액, 총재산, 연령, 거주지역, 채권수, 채무원인을 알고 계시면 변제금 진단이 빨라집니다.</p>
-            </div>
-            <div class="mini-proof" aria-label="상담 기준">
-              <div><strong>비밀보장</strong><span>상담 내용과 진행 정보 보호</span></div>
-              <div><strong>전담응대</strong><span>채권추심과 서류 준비 방향 안내</span></div>
-            </div>
-          </article>
-
-          <article class="contact-card">
-            <h3>상담 신청</h3>
-            <form id="consultForm" novalidate>
+          <form action="" method="POST" data-consult-form data-mail-fallback="leelawtax@gmail.com">
+            <input type="hidden" name="_subject" value="이로택스 홈페이지 상담 신청" />
+            <div class="form-grid">
               <div class="field">
-                <label for="name">이름</label>
-                <input id="name" name="name" type="text" autocomplete="name" placeholder="성함을 입력해주세요" required />
+                <label for="name">성함</label>
+                <input id="name" name="name" type="text" autocomplete="name" placeholder="성함" required />
               </div>
               <div class="field">
                 <label for="phone">연락처</label>
@@ -1787,82 +795,87 @@
               <div class="field">
                 <label for="service">상담 분야</label>
                 <select id="service" name="service" required>
-                  <option value="">상담 분야를 선택해주세요</option>
+                  <option value="">선택해 주세요</option>
                   <option>개인회생</option>
                   <option>개인파산</option>
-                  <option>변제금 자가진단</option>
+                  <option>법인회생</option>
+                  <option>법인파산</option>
                   <option>채권추심 대응</option>
+                  <option>변제금 사전 상담</option>
                 </select>
               </div>
               <div class="field">
-                <label for="message">상담 내용</label>
-                <textarea id="message" name="message" placeholder="총채무액, 재산, 채권수 등 현재 상황을 간단히 남겨주세요."></textarea>
+                <label for="region">거주지역</label>
+                <input id="region" name="region" type="text" placeholder="예: 서울, 경기" />
               </div>
-              <label class="privacy">
-                <input type="checkbox" name="privacy_agree" required />
-                <span>상담 회신을 위한 개인정보 수집에 동의합니다.</span>
-              </label>
-              <button class="btn btn-blue" type="submit">상담 신청</button>
-              <p class="form-message" role="status" aria-live="polite"></p>
-            </form>
-          </article>
+              <div class="field">
+                <label for="debt">총채무액</label>
+                <input id="debt" name="debt" type="text" placeholder="예: 8천만원" />
+              </div>
+              <div class="field">
+                <label for="assets">총재산</label>
+                <input id="assets" name="assets" type="text" placeholder="예: 보증금, 차량 등" />
+              </div>
+              <div class="field">
+                <label for="age">연령</label>
+                <input id="age" name="age" type="text" placeholder="예: 40대" />
+              </div>
+              <div class="field">
+                <label for="creditors">채권수</label>
+                <input id="creditors" name="creditors" type="text" placeholder="예: 8곳" />
+              </div>
+              <div class="field full">
+                <label for="cause">채무원인</label>
+                <input id="cause" name="cause" type="text" placeholder="생활비, 사업자금, 보증, 투자 등" />
+              </div>
+              <div class="field full">
+                <label for="message">현재 상황</label>
+                <textarea id="message" name="message" placeholder="채무액, 월 소득, 연체 여부를 간단히 남겨주세요."></textarea>
+              </div>
+            </div>
+            <label class="agree">
+              <input type="checkbox" name="privacy_agree" value="동의" required />
+              <span>상담 회신을 위한 개인정보 수집 및 이용에 동의합니다.</span>
+            </label>
+            <p class="form-note">수집항목: 성함, 연락처, 거주지역, 상담내용 · 이용목적: 상담 회신</p>
+            <button class="btn btn-primary form-submit" type="submit">상담 요청 보내기 <span aria-hidden="true">→</span></button>
+            <p class="form-status" role="status" aria-live="polite" data-form-status></p>
+          </form>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="site-footer">
     <div class="container footer-inner">
       <div>
         <strong>이로택스 법무사 사무소</strong>
         <p>
           사업자번호 : 865-02-03072<br />
-          대표법무사 : 이승용<br />
-          광고책임담당자 : 이승용
-        </p>
-      </div>
-      <div>
-        <p>
+          대표법무사 : 이승용 · 광고책임담당자 : 이승용<br />
           주소 : 서울특별시 서초구 법원로 3길 24, 301호<br />
-          TEL : 02-598-8908<br />
-          FAX : 070-8270-0094<br />
+          TEL : 02-598-8908 · FAX : 070-8270-0094<br />
           이메일 : leelawtax@gmail.com
         </p>
+        <p class="fine-print">상담 내용과 절차 결과는 개인 상황, 제출 자료, 법원 판단에 따라 달라질 수 있습니다.</p>
+        <p>© <span data-year>2026</span> 이로택스 법무사 사무소. All rights reserved.</p>
+      </div>
+      <div class="footer-links" aria-label="하단 메뉴">
+        <a href="#audience">대상</a>
+        <a href="#rights">보호</a>
+        <a href="#diagnosis">진단</a>
+        <a href="#services">절차</a>
+        <a href="#cases">사례</a>
+        <a href="#contact">상담신청</a>
       </div>
     </div>
-    <div class="container copyright">© 2026 이로택스 법무사 사무소. All rights reserved.</div>
   </footer>
 
-  <script>
-    document.querySelectorAll('a[href^="#"]').forEach((link) => {
-      link.addEventListener("click", (event) => {
-        const target = document.querySelector(link.getAttribute("href"));
-        if (!target) return;
-        event.preventDefault();
-        target.scrollIntoView({ behavior: "smooth", block: "start" });
-      });
-    });
+  <div class="floating-contact" aria-label="모바일 빠른 상담">
+    <a href="tel:025988908">전화상담</a>
+    <a href="#contact">상담신청</a>
+  </div>
 
-    const consultForm = document.getElementById("consultForm");
-    const message = consultForm ? consultForm.querySelector(".form-message") : null;
-
-    if (consultForm && message) {
-      consultForm.addEventListener("submit", function (event) {
-        event.preventDefault();
-        message.className = "form-message";
-
-        if (!this.checkValidity()) {
-          message.textContent = "필수 항목과 개인정보 동의를 확인해주세요.";
-          message.classList.add("error");
-          const firstInvalid = this.querySelector(":invalid");
-          if (firstInvalid) firstInvalid.focus();
-          return;
-        }
-
-        message.textContent = "상담 신청이 저장되었습니다. 실제 발송 연결 전 테스트 화면입니다.";
-        message.classList.add("success");
-      });
-    }
-  </script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
